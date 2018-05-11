@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="smallview" customModule="swiftSudoku" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="293"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-8y-kcS">
+                    <rect key="frame" x="0.0" y="0.0" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PGg-DS-xWI">
+                    <rect key="frame" x="113" y="0.0" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NbE-Na-Myg">
+                    <rect key="frame" x="226" y="0.0" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-M3-WgZ">
+                    <rect key="frame" x="0.0" y="97.5" width="113" height="98"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-Qg-JdF">
+                    <rect key="frame" x="113" y="97.5" width="113" height="98"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-wd-bdQ">
+                    <rect key="frame" x="226" y="97.5" width="113" height="98"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Xl-lo-TQl">
+                    <rect key="frame" x="113" y="195.5" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7cT-Kn-Fti">
+                    <rect key="frame" x="226" y="195.5" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pvd-aO-8XC">
+                    <rect key="frame" x="0.0" y="195.5" width="113" height="97.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wfr-M3-WgZ" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="6LH-1x-5JQ"/>
+                <constraint firstItem="NbE-Na-Myg" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="74q-nR-qBe"/>
+                <constraint firstItem="9Xl-lo-TQl" firstAttribute="leading" secondItem="Pvd-aO-8XC" secondAttribute="trailing" id="878-L3-KsG"/>
+                <constraint firstItem="Pvd-aO-8XC" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="9Ye-X8-vQv"/>
+                <constraint firstItem="Pvd-aO-8XC" firstAttribute="top" secondItem="wfr-M3-WgZ" secondAttribute="bottom" id="DhH-hS-6JQ"/>
+                <constraint firstItem="7cT-Kn-Fti" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="EUV-8U-zkz"/>
+                <constraint firstItem="gjz-8y-kcS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="FMb-pT-8h3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7cT-Kn-Fti" secondAttribute="trailing" id="GlO-TT-78T"/>
+                <constraint firstItem="gjz-8y-kcS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H1z-CB-u0B"/>
+                <constraint firstItem="bXS-Qg-JdF" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="IF1-SQ-15U"/>
+                <constraint firstItem="bXS-Qg-JdF" firstAttribute="leading" secondItem="wfr-M3-WgZ" secondAttribute="trailing" id="J57-7Y-Pjq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7cT-Kn-Fti" secondAttribute="bottom" id="MnS-xp-h7C"/>
+                <constraint firstItem="Pvd-aO-8XC" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="N2R-NE-gHe"/>
+                <constraint firstItem="wfr-M3-WgZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OOU-js-CzB"/>
+                <constraint firstItem="wfr-M3-WgZ" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="PGS-IT-N33"/>
+                <constraint firstItem="9Xl-lo-TQl" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="QPz-ep-bWv"/>
+                <constraint firstItem="NbE-Na-Myg" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="RT8-SO-pJz"/>
+                <constraint firstItem="9Xl-lo-TQl" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="Rrj-0E-Kz6"/>
+                <constraint firstItem="PGg-DS-xWI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SMR-ci-mec"/>
+                <constraint firstItem="tQP-wd-bdQ" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="UmV-bL-iXd"/>
+                <constraint firstItem="9Xl-lo-TQl" firstAttribute="top" secondItem="bXS-Qg-JdF" secondAttribute="bottom" id="Usu-gh-Mcb"/>
+                <constraint firstItem="wfr-M3-WgZ" firstAttribute="top" secondItem="gjz-8y-kcS" secondAttribute="bottom" id="VcM-uX-Uhf"/>
+                <constraint firstItem="7cT-Kn-Fti" firstAttribute="leading" secondItem="9Xl-lo-TQl" secondAttribute="trailing" id="aHx-g3-MP9"/>
+                <constraint firstItem="bXS-Qg-JdF" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="eGY-lK-bRP"/>
+                <constraint firstItem="7cT-Kn-Fti" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="gBE-aM-oXL"/>
+                <constraint firstItem="NbE-Na-Myg" firstAttribute="leading" secondItem="PGg-DS-xWI" secondAttribute="trailing" id="goX-HX-fQv"/>
+                <constraint firstItem="NbE-Na-Myg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="h2Q-rC-ccw"/>
+                <constraint firstItem="tQP-wd-bdQ" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="j2G-SC-mo3"/>
+                <constraint firstItem="bXS-Qg-JdF" firstAttribute="top" secondItem="PGg-DS-xWI" secondAttribute="bottom" id="kT5-zw-Cwy"/>
+                <constraint firstItem="PGg-DS-xWI" firstAttribute="width" secondItem="gjz-8y-kcS" secondAttribute="width" id="n93-fB-FaY"/>
+                <constraint firstItem="tQP-wd-bdQ" firstAttribute="top" secondItem="NbE-Na-Myg" secondAttribute="bottom" id="nv3-Nl-YgJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NbE-Na-Myg" secondAttribute="trailing" id="oUo-a5-HVh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Xl-lo-TQl" secondAttribute="bottom" id="s4V-a8-8wO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tQP-wd-bdQ" secondAttribute="trailing" id="slQ-4Z-gTi"/>
+                <constraint firstItem="PGg-DS-xWI" firstAttribute="leading" secondItem="gjz-8y-kcS" secondAttribute="trailing" id="uVZ-CL-44e"/>
+                <constraint firstItem="7cT-Kn-Fti" firstAttribute="top" secondItem="tQP-wd-bdQ" secondAttribute="bottom" id="v80-bc-veU"/>
+                <constraint firstItem="Pvd-aO-8XC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wIb-Gv-Ibu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pvd-aO-8XC" secondAttribute="bottom" id="xJW-TD-4Bm"/>
+                <constraint firstItem="PGg-DS-xWI" firstAttribute="height" secondItem="gjz-8y-kcS" secondAttribute="height" id="yRd-GS-sO4"/>
+                <constraint firstItem="tQP-wd-bdQ" firstAttribute="leading" secondItem="bXS-Qg-JdF" secondAttribute="trailing" id="yl5-Vu-pDk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="CountText" destination="bXS-Qg-JdF" id="QUR-9z-t1A"/>
+                <outlet property="DottomText" destination="9Xl-lo-TQl" id="loY-9K-oSW"/>
+                <outlet property="LeftDottomText" destination="Pvd-aO-8XC" id="vCV-KC-0ch"/>
+                <outlet property="LeftText" destination="wfr-M3-WgZ" id="jfC-Mw-dQs"/>
+                <outlet property="LeftUpText" destination="gjz-8y-kcS" id="2Rc-XX-Gnr"/>
+                <outlet property="RightBottomText" destination="7cT-Kn-Fti" id="7yV-gc-4QO"/>
+                <outlet property="RightText" destination="tQP-wd-bdQ" id="stT-8X-7ah"/>
+                <outlet property="RightUpText" destination="NbE-Na-Myg" id="gtH-CK-yn4"/>
+                <outlet property="UpText" destination="PGg-DS-xWI" id="UrJ-Zh-zUM"/>
+            </connections>
+            <point key="canvasLocation" x="-74.5" y="81.5"/>
+        </view>
+    </objects>
+</document>
