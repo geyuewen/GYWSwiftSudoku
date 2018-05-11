@@ -15,7 +15,7 @@
 		042815C520A5774700557E7E /* smallview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042815C320A5774600557E7E /* smallview.swift */; };
 		042815C620A5774700557E7E /* smallview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042815C420A5774600557E7E /* smallview.xib */; };
 		042815C920A5774F00557E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042815C720A5774F00557E7E /* Main.storyboard */; };
-		042815CA20A5774F00557E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042815C820A5774F00557E7E /* ViewController.swift */; };
+		042815CC20A580C700557E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042815CB20A580C700557E7E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		042815C320A5774600557E7E /* smallview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smallview.swift; sourceTree = "<group>"; };
 		042815C420A5774600557E7E /* smallview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = smallview.xib; sourceTree = "<group>"; };
 		042815C720A5774F00557E7E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		042815C820A5774F00557E7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../数独辅助/数独辅助/ViewController.swift"; sourceTree = "<group>"; };
+		042815CB20A580C700557E7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			children = (
 				0428159520A5714400557E7E /* AppDelegate.swift */,
 				042815C720A5774F00557E7E /* Main.storyboard */,
-				042815C820A5774F00557E7E /* ViewController.swift */,
+				042815CB20A580C700557E7E /* ViewController.swift */,
 				042815C320A5774600557E7E /* smallview.swift */,
 				042815C420A5774600557E7E /* smallview.xib */,
 				0428159C20A5714500557E7E /* Assets.xcassets */,
@@ -263,8 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042815CC20A580C700557E7E /* ViewController.swift in Sources */,
 				0428159620A5714400557E7E /* AppDelegate.swift in Sources */,
-				042815CA20A5774F00557E7E /* ViewController.swift in Sources */,
 				042815C520A5774700557E7E /* smallview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
