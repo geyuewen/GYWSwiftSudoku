@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="数独辅助" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftSudoku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,9 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2h-L3-XfB">
                                 <rect key="frame" x="10" y="60" width="355" height="355"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="D2h-L3-XfB" secondAttribute="height" multiplier="1:1" id="Ezt-iq-1Ot"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWI-IJ-UUv">
                                 <rect key="frame" x="20" y="445" width="80" height="30"/>
@@ -54,6 +51,12 @@
                                     <action selector="nilView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Iw-f6-o0P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-oK-HWe">
+                                <rect key="frame" x="20" y="495" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -61,15 +64,18 @@
                             <constraint firstItem="D2h-L3-XfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4d3-sb-V5E"/>
                             <constraint firstItem="JVR-wB-hIp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BeS-tK-5FI"/>
                             <constraint firstAttribute="trailing" secondItem="D2h-L3-XfB" secondAttribute="trailing" constant="10" id="Ojx-Qa-caM"/>
+                            <constraint firstItem="B6j-oK-HWe" firstAttribute="top" secondItem="CWI-IJ-UUv" secondAttribute="bottom" constant="20" id="Qhp-Av-TV7"/>
                             <constraint firstItem="D2h-L3-XfB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="bHG-bC-ict"/>
                             <constraint firstItem="CWI-IJ-UUv" firstAttribute="top" secondItem="JVR-wB-hIp" secondAttribute="top" id="eaH-9l-OW5"/>
                             <constraint firstItem="JVR-wB-hIp" firstAttribute="top" secondItem="D2h-L3-XfB" secondAttribute="bottom" constant="30" id="gQR-Jl-zWU"/>
+                            <constraint firstItem="B6j-oK-HWe" firstAttribute="leading" secondItem="CWI-IJ-UUv" secondAttribute="leading" id="iIu-py-XuE"/>
                             <constraint firstItem="CWI-IJ-UUv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="r2e-po-ViI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="BackView" destination="D2h-L3-XfB" id="DIa-Se-gNo"/>
+                        <outlet property="EndText" destination="B6j-oK-HWe" id="tAE-uY-emf"/>
                         <outlet property="OpenBtn" destination="CWI-IJ-UUv" id="ARs-eh-4oy"/>
                     </connections>
                 </viewController>

@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var OpenBtn: UIButton!
     
+    @IBOutlet weak var EndText: UILabel!
     var count_way : Int = 0
     
     var oneview : smallview!
@@ -197,6 +198,12 @@ class ViewController: UIViewController {
             x += 1
             self.ResultArray.append(TempInitialArray)
             self.count_way += 1
+            if count_way >= 1 {
+                self.EndText.text = "得出\(Int(count_way))个解"
+            } else if count_way >= 10 {
+                self.EndText.text = "至少10个解"
+            }
+            
             if self.count_way == 1  {
                 self.ReturnResult(EndArray: TempInitialArray)
                 self.OpenBtn.isUserInteractionEnabled = true
@@ -231,11 +238,7 @@ class ViewController: UIViewController {
     
     //转换数据
     @IBAction func Click(_ sender: Any) {
-        
-        self.OpenBtn.setTitle("解析中", for: UIControlState.normal)
-        self.OpenBtn.isUserInteractionEnabled = false
-        self.self.EndWhile = false
-        
+       
         //清洗数据
         self.NewData()
         var tempArray = [] as! [[Int]]
@@ -247,6 +250,20 @@ class ViewController: UIViewController {
                 self.InitialArray[i][j] = tempArray[(3 * Int(i/3) + Int(j/3))][(j%3) + 3 * (i%3)]
             }
         }
+        
+        if !self.CheckingData(RowArray: self.InitialArray, PieceArray: tempArray) {
+            print("有问题退出这次解析")
+            self.nilView(self.OpenBtn)
+            self.EndText.text = "数据有误请重新输入"
+           return
+        }
+        print("开始解析")
+        self.EndText.text = "计算中"
+
+        self.OpenBtn.setTitle("解析中", for: UIControlState.normal)
+        self.OpenBtn.isUserInteractionEnabled = false
+        self.self.EndWhile = false
+        
         ///开始计算
         self.Feasiblesolution()
         //打印结果
@@ -280,5 +297,61 @@ class ViewController: UIViewController {
         self.OpenBtn.isUserInteractionEnabled = true
         self.OpenBtn.setTitle("开始计算", for: UIControlState.normal)
         self.EndWhile = true
+          self.EndText.text = "..."
+    }
+    
+    /// 行,块 检查数据
+    ///   - RowArray: 行数组
+    ///   - PieceArray: 块数组
+    func CheckingData(RowArray : [[Int]]!  ,PieceArray : [[Int]]! ) -> Bool {
+     
+        //将行改成列
+        var tempArray = [] as! [[Int]]
+        for _ in 0...8 {
+            tempArray.append([-1,-1,-1,-1,-1,-1,-1,-1,-1])
+        }
+        for i in 0...8 {
+            for j in 0...8 {
+                tempArray[i][j] = RowArray[j][i]
+            }
+        }
+        
+        if arrayPD(array: RowArray) && arrayPD(array: PieceArray) && arrayPD(array: tempArray){
+            //数据没有错误
+            print("数据合格")
+            return true
+        }
+        print("数据有问题")
+        return false
+    }
+    
+    func arrayPD(array : [[Int]]!) -> Bool {
+        
+        for i in 0...8 {
+            let onearray = array[i].filter { a in a >= 0 } //去零数组
+            let twearray = onearray.filterDuplicates({$0}) //去重复数组
+            
+            if onearray != twearray { //数组不统一则重复
+                return false
+            }
+            
+        }
+        
+        return true
     }
 }
+
+extension Array {
+    // 去重
+    func filterDuplicates<E: Equatable>(_ filter: (Element) -> E) -> [Element] {
+        var result = [Element]()
+        for value in self {
+            let key = filter(value)
+            if !result.map({filter($0)}).contains(key) {
+                result.append(value)
+            }
+        }
+        return result
+    }
+}
+
