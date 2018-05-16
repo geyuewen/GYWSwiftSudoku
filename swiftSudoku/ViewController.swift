@@ -55,9 +55,9 @@ class ViewController: UIViewController {
     
     /// 绘制界面,添加9个小的九宫格
     func upUi() {
-        
+        self.BackView.frame = CGRect.init(x: 10, y: 50, width: GYWWitdh - 20, height: GYWWitdh - 20)
         let longCount = (GYWWitdh - 30)/3
-        
+        print(GYWWitdh,longCount)
         oneview = smallview.smallviewWihtXib()
         oneview.frame = CGRect.init(x: 0, y: 0, width: longCount, height: longCount)
         self.BackView.addSubview(oneview)
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         tweview = smallview.smallviewWihtXib()
         tweview.frame = CGRect.init(x: (longCount + 5), y: 0, width: longCount, height: longCount)
         self.BackView.addSubview(tweview)
-        
+
         threeview = smallview.smallviewWihtXib()
         threeview.frame = CGRect.init(x: 2 * (longCount + 5), y: 0, width: longCount, height: longCount)
         self.BackView.addSubview(threeview)
@@ -198,10 +198,10 @@ class ViewController: UIViewController {
             x += 1
             self.ResultArray.append(TempInitialArray)
             self.count_way += 1
-            if count_way >= 1 {
-                self.EndText.text = "得出\(Int(count_way))个解"
-            } else if count_way >= 10 {
-                self.EndText.text = "至少10个解"
+            if count_way >= 10 {
+                 self.EndText.text = "至少10个解"
+            } else if count_way >= 1 {
+               self.EndText.text = "得出\(Int(count_way))个解"
             }
             
             if self.count_way == 1  {
@@ -282,7 +282,6 @@ class ViewController: UIViewController {
                 tempArray[i][j] = EndArray[(3 * Int(i/3) + Int(j/3))][((j%3) + 3 * (i%3))]
             }
         }
-        
         for count in 0...8 {
             self.viewArray[count].DisplayResults(tempArray[count])
         }
