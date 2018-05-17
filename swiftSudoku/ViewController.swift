@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var EndText: UILabel!
     var count_way : Int = 0
-    
+    //九个块从左到右从上到下
     var oneview : smallview!
     var tweview : smallview!
     var threeview : smallview!
@@ -49,7 +49,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.upUi()
-        
         
     }
     
@@ -112,7 +111,7 @@ class ViewController: UIViewController {
         self.count_way = 0
     }
     
-    //从块排列到行排列
+    //从块排列到行排列 一个简单的函数也可以写成宏
     func DJK(Y: Int ,X : Int) -> Int {
         return 3 * Int(Y/3)+Int(X/3)
     }
@@ -251,12 +250,12 @@ class ViewController: UIViewController {
             }
         }
         
-        if !self.CheckingData(RowArray: self.InitialArray, PieceArray: tempArray) {
-            print("有问题退出这次解析")
-            self.nilView(self.OpenBtn)
-            self.EndText.text = "数据有误请重新输入"
-           return
-        }
+//        if !self.CheckingData(RowArray: self.InitialArray, PieceArray: tempArray) {
+//            print("有问题退出这次解析")
+//            self.nilView(self.OpenBtn)
+//            self.EndText.text = "数据有误请重新输入"
+//           return
+//        }
         print("开始解析")
         self.EndText.text = "计算中"
 
@@ -296,7 +295,7 @@ class ViewController: UIViewController {
         self.OpenBtn.isUserInteractionEnabled = true
         self.OpenBtn.setTitle("开始计算", for: UIControlState.normal)
         self.EndWhile = true
-          self.EndText.text = "..."
+        self.EndText.text = "..."
     }
     
     /// 行,块 检查数据
@@ -328,9 +327,7 @@ class ViewController: UIViewController {
         
         for i in 0...8 {
             let onearray = array[i].filter { a in a >= 0 } //去零数组
-            let twearray = onearray.filterDuplicates({$0}) //去重复数组
-            
-            if onearray != twearray { //数组不统一则重复
+            if onearray != onearray.filterDuplicates({$0}) { //去重复数组 //数组不统一则重复
                 return false
             }
             
